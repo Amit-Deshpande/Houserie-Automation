@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Command line test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="13.359">
+  <properties />
+  
+  
+            <testcase name="CancelOrderByLandlord" time="13.359" classname="com.rentalroost.automation.houserieqa.CancelOrderByLandlordTest" />
+      
+</testsuite>

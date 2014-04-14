@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Command line test"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="3"
+           time="0.000">
+  <properties />
+  
+            <testcase name="setUp" time="0.0" classname="com.rentalroost.automation.houserieqa.ChangePaymentOptionLandlordToTenantTest">
+          <skipped />
+    </testcase>
+            <testcase name="performStartup" time="0.0" classname="com.rentalroost.automation.houserieqa.ChangePaymentOptionLandlordToTenantTest">
+          <skipped />
+    </testcase>
+            <testcase name="ChangePaymentOptionLandlordToTenant" time="0.0" classname="com.rentalroost.automation.houserieqa.ChangePaymentOptionLandlordToTenantTest">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

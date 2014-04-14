@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.rentalroost.automation</groupId>
+    <artifactId>Houserie-Automation</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.rentalroost.automation.core.qa</groupId>
+  <artifactId>Core</artifactId>
+  <name>Core</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+<repositories>
+		<repository>
+			<id>java-net</id>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+	</repositories> 
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+	
+	<dependency>
+
+			<groupId>org.testng</groupId>
+
+			<artifactId>testng</artifactId>
+
+			<version>6.8</version>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>org.seleniumhq.selenium</groupId>
+
+			<artifactId>selenium-java</artifactId>
+
+			<version>2.41.0</version>
+
+		</dependency>  
+
+		<dependency>
+
+			<groupId>org.seleniumhq.selenium</groupId>
+
+			<artifactId>selenium-server</artifactId>
+
+			<version>2.41.0</version>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>org.uncommons</groupId>
+
+			<artifactId>reportng</artifactId>
+
+			<version>1.1.2</version>
+
+			<exclusions>
+
+				<exclusion>
+
+					<groupId>org.testng</groupId>
+
+					<artifactId>testng</artifactId>
+
+				</exclusion>
+
+			</exclusions>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>velocity</groupId>
+
+			<artifactId>velocity</artifactId>
+
+			<version>1.4</version>
+
+			<scope>test</scope>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>poi</groupId>
+
+			<artifactId>poi</artifactId>
+
+			<version>2.5.1</version>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>net.sourceforge.jexcelapi</groupId>
+
+			<artifactId>jxl</artifactId>
+
+			<version>2.6</version>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>org.apache.httpcomponents</groupId>
+
+			<artifactId>httpclient</artifactId>
+
+			<version>4.1.1</version>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>com.google.inject</groupId>
+
+			<artifactId>guice</artifactId>
+
+			<version>2.0</version>
+
+		</dependency>
+
+		<dependency>
+
+			<groupId>javax.mail</groupId>
+
+			<artifactId>mail</artifactId>
+
+			<version>1.4</version>
+
+		</dependency>	
+  </dependencies>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<encoding>iso-8859-1</encoding>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.8</version>
+			</plugin>
+	</plugins>
+	</build>
+
+
+</project>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Command line test"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="3"
+           time="0.000">
+  <properties />
+  
+            <testcase name="performStartup" time="0.0" classname="com.rentalroost.automation.houserieqa.HRLoginTest">
+          <skipped />
+    </testcase>
+            <testcase name="setUp" time="0.0" classname="com.rentalroost.automation.houserieqa.HRLoginTest">
+          <skipped />
+    </testcase>
+            <testcase name="HRLogin" time="0.0" classname="com.rentalroost.automation.houserieqa.HRLoginTest">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>
