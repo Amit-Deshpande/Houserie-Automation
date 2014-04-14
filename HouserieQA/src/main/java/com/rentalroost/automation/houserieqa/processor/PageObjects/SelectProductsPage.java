@@ -88,6 +88,7 @@ public class SelectProductsPage extends HouserieWebPage{
 	public List<WebElement> pageElementsToWait() {
 		List<WebElement> myElementList = new ArrayList<WebElement>();
 		myElementList.add(sampleReportLink);
+		myElementList.add(tenantPaysRadioButton);
 		myElementList.add(initiateOrderButton);
 		return myElementList;
 	}

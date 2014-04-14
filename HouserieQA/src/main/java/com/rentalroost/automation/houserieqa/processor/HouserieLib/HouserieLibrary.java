@@ -3,8 +3,10 @@ package com.rentalroost.automation.houserieqa.processor.HouserieLib;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.internal.Locatable;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
@@ -172,8 +174,12 @@ public class HouserieLibrary {
 		addTenantsPage.enterSuffix("Mr.");
 		addTenantsPage.enterEmail(tenantUserName);
 		addTenantsPage.clickNextButton();
-		
+		addTenantsPage.waitABit(3000);
 		selectProductsPage = site.goToSelectProductsPage();
+		selectProductsPage.waitABit(3000);
+		
+	    ((JavascriptExecutor)driver).executeScript("window.scrollBy(0,"+800+");");
+	    selectProductsPage.waitABit(5000);
 
 		if(paymethod == "Landlord"){
 			selectProductsPage.clickLandloardPaysRadioButton();

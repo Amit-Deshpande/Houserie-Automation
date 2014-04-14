@@ -1,7 +1,7 @@
 // 1) Login using Landlord and initiate the order for single tenant.
 // 2) Navigate to the My Order.
 // 3) Cancel the order.
-// Adding test comment for git usage
+
 package com.rentalroost.automation.houserieqa;
 
 import static com.rentalroost.automation.houserieqa.PropertyConstants.DEFAULT_LANDLORDLOGIN_USERNAME;
