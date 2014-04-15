@@ -78,24 +78,38 @@ public class ChangePaymentOptionTenantToLandlordTest extends HouserieBasicTest{
 		
 		myOrderHistoryPage = site.goToMyOrderHistoryPage();
 		
+		System.out.println("User is on the My Order page.");
+		
 		myOrderHistoryPage.clickChangeOrderOptionsButton();
 		myOrderHistoryPage.waitForAnElement(By.xpath("html/body/div[12]"));
 		
+		myOrderHistoryPage.waitABit(1500);
+		
 		if(myOrderHistoryPage.getChangePaymentOptionDialog().isDisplayed()){
+			System.out.println("User has focus on the change payment option dialog.");
 			myOrderHistoryPage.clickPaysLandlordButton();
 			myOrderHistoryPage.clickChangePaymentOptionButton();			
 		}
 		
+		myOrderHistoryPage.waitABit(1500);
+		
 		couponCodePage = site.goToCouponCodePage();
+		
+		System.out.println("User is on the Coupon code page.");
+		
 		couponCodePage.clickSkipButton();
 	
 		paymentPage = site.goToPaymentPage();
+		
+		System.out.println("User is on the payment page.");
 	
 		paymentPage.enterCCField(ccNo);
 		paymentPage.enterCCExpMonth(ccExpirationMonth);
 		paymentPage.enterCCExpYear(ccExpirationYear);
 		paymentPage.enterCCVerification(verificationCode);
 		paymentPage.clickPaymentNowButton();
+		
+		System.out.println("User has done the payment.");
 	
 		paymentPage.waitForAnElement(By.xpath("id('maincont')/div[2]/p"));
 	
