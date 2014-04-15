@@ -300,7 +300,12 @@ public class HouserieLibrary {
 		
 		addTenantsPage.clickNextButton();
 		
+		addTenantsPage.waitABit(3000);
 		selectProductsPage = site.goToSelectProductsPage();
+		selectProductsPage.waitABit(3000);
+		
+	    ((JavascriptExecutor)driver).executeScript("window.scrollBy(0,"+1100+");");
+	    selectProductsPage.waitABit(5000);
 
 		if(paymethod == "Landlord"){
 			selectProductsPage.clickLandloardPaysRadioButton();
