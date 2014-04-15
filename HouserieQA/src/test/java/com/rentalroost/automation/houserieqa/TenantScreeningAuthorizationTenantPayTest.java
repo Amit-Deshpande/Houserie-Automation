@@ -71,7 +71,7 @@ public class TenantScreeningAuthorizationTenantPayTest extends HouserieBasicTest
 	}
 
 	@Test(groups="smoke")
-    public void TenantScreeningAuthorizationLandlordPay(){
+    public void TenantScreeningAuthorizationTenantPay(){
 		
 		fName = houserieLib.getPropertyValue(DEFAULT_TENANTINFO_FIRSTNAME);
 		lName = houserieLib.getPropertyValue(DEFAULT_TENANTINFO_LASTNAME);
@@ -110,15 +110,21 @@ public class TenantScreeningAuthorizationTenantPayTest extends HouserieBasicTest
 		messagePage.clickMyAccountDropArrow();
 		messagePage.clickSignOutLink();
 		
+		System.out.println("Lanlord has initiated order with Tenant pay and logged out.");
+		
 		homePageBeforeLoginPage = PageFactory.initElements(driver, HomePageBeforeLoginPage.class);
 		
 		Assert.assertTrue(houserieLib.loginToHR(tenantUserName, password), "Login is not successfully done.");		
 		messagePage = site.goToMessagePage();
 		
+		System.out.println("Tenant user logged in and navigated to the message page.");
+		
 		System.out.println(messagePage.getTenantMessageDetails("1").getText());
 		
 		messagePage.getTenantMessageDetailsForClick("1").click();
 		tenantEnterInfoAndAcceptTermsPage = site.goToTenantEnterInfoAndAcceptTermsPage();
+		
+		System.out.println("User is on the accept terms page.");
 		
 		tenantEnterInfoAndAcceptTermsPage.setTenantFirstName(fName);
 		tenantEnterInfoAndAcceptTermsPage.setTenantLastName(lName);
@@ -147,14 +153,22 @@ public class TenantScreeningAuthorizationTenantPayTest extends HouserieBasicTest
 		tenantEnterInfoAndAcceptTermsPage.clickIagreeButton();
 		
 		tenantAuthorizeReportPage = site.goToTenantAuthorizeReportPage();
+		
+		System.out.println("User is on the Tenant Authorize Report page.");
+		
 		tenantAuthorizeReportPage.clickAgreeChkBox();
 		tenantAuthorizeReportPage.setFullName(fName);
 		tenantAuthorizeReportPage.setSSN(sssLastFourDigit);
 		tenantAuthorizeReportPage.clickAuthorizeButton();
 		
+		tenantAuthorizeReportPage.waitABit(1500);
+		
 		driver.switchTo().alert().accept();
 		
 		paymentPage = site.goToPaymentPage();
+		
+		System.out.println("User is on the payment page.");
+		
 		paymentPage.enterCCField(ccNo);
 		paymentPage.enterCCExpMonth(ccExpirationMonth);
 		paymentPage.enterCCExpYear(ccExpirationYear);
@@ -168,12 +182,16 @@ public class TenantScreeningAuthorizationTenantPayTest extends HouserieBasicTest
 		paymentPage.clickMessageLink();
 		messagePage = site.goToMessagePage();
 		
+		System.out.println("User is on the message page.");
+		
 		Assert.assertTrue(messagePage.getTenantMessageDetails("1").getText().contains(initiatedScreeningMessage), "Initiated screening message does not appears screen.");
 		
 		messagePage.clickMyAccountDropArrow();
 		messagePage.clickSignOutLink();
 		
 		homePageBeforeLoginPage = site.goToLoggedOutPage();
+		
+		System.out.println("User is logged out.");
 		
 	}
 
