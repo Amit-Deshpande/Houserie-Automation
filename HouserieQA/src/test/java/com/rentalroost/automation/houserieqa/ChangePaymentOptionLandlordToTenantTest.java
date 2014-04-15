@@ -66,9 +66,9 @@ public class ChangePaymentOptionLandlordToTenantTest extends HouserieBasicTest{
 		myOrderHistoryPage = site.goToMyOrderHistoryPage();
 		
 		myOrderHistoryPage.clickChangeOrderOptionsButton();
-		myOrderHistoryPage.waitForAnElement(By.xpath("html/body/div[12]"));
+		myOrderHistoryPage.waitABit(2000);
 		
-		myOrderHistoryPage.waitABit(1500);
+		//myOrderHistoryPage.waitForAnElement(By.xpath("html/body/div[12]"));
 		
 		if(myOrderHistoryPage.getChangePaymentOptionDialog().isDisplayed()){
 			System.out.println("User has focus on the change payment option dialog.");

@@ -75,9 +75,9 @@ public class ChangePaymentOptionBeforeMultipleTenantsAuthorizationTest extends H
 		System.out.println("User is on the My Order page.");
 		
 		myOrderHistoryPage.clickChangeOrderOptionsButton();
-		myOrderHistoryPage.waitForAnElement(By.xpath("html/body/div[12]"));
 		
-		myOrderHistoryPage.waitABit(1500);
+		myOrderHistoryPage.waitABit(2000);
+		//myOrderHistoryPage.waitForAnElement(By.xpath("html/body/div[12]"));
 		
 		if(myOrderHistoryPage.getChangePaymentOptionDialog().isDisplayed()){
 			System.out.println("User has focus on the change payment option dialog.");
