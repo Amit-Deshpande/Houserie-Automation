@@ -145,12 +145,19 @@ public class HouserieLibrary {
 		ccExpirationYear = houserieLib.getPropertyValue(DEFAULT_CC_EXPIRATIONYEAR);
 		verificationCode = houserieLib.getPropertyValue(DEFAULT_CC_VERIFICATIONCODE);
 		
+		System.out.println("User is doing login");
+		
 		Assert.assertTrue(houserieLib.loginToHR(landlordUserName, password), "Login is not successfully done.");
 		
 		messagePage = site.goToMessagePage();
+		
+		System.out.println("User is on the Message page.");
+		
 		messagePage.clickStartScreeningTenantsButton();
 		
 		asLandlordPage = site.goToAsLandlordPage();
+		
+		System.out.println("User is on the Landlord page.");
 		
 		asLandlordPage.enterPropertyName(propertyName + currentTime);
 		asLandlordPage.enterPropertyDescription(propertyDescription);
@@ -163,10 +170,14 @@ public class HouserieLibrary {
 		asLandlordPage.enterLeaseRent(leaseRent);
 		asLandlordPage.enterLeaseDeposit(leaseDeposite);
 		asLandlordPage.enterLeaseTerm(leaseTerm);
+		System.out.println("Select High End property radio button.");
 		asLandlordPage.clickHighEndPropertyRadioButton();
+		System.out.println("Selected High End property radio button.");
 		asLandlordPage.clickNextButton();
 		
 		addTenantsPage = site.goToAddTenantsPage();
+		
+		System.out.println("User is on the Add Tenant page.");
 		
 		addTenantsPage.enterFirstName("Fname"+currentTime);
 		addTenantsPage.enterMiddleName("Mname"+currentTime);
@@ -208,9 +219,13 @@ public class HouserieLibrary {
 			Assert.assertTrue(paymentPage.getPaymentConfirmationNote().contains("Thank you"), "Thank you message does not appears screen.");
 		}
 		
+		System.out.println("User has initiated order.");
+		
 		selectProductsPage.clickMyAccountDropArrow();
 		selectProductsPage.clickMessageLink();
 		messagePage = site.goToMessagePage();
+		
+		System.out.println("User is on the Message page.");
 		
 		status = true;
 		return status;
@@ -255,12 +270,19 @@ public class HouserieLibrary {
 		testUser.add(tenantLogin0);
 		testUser.add(tenantLogin1);
 		
+		System.out.println("User is doing login");
+		
 		Assert.assertTrue(houserieLib.loginToHR(landlordUserName, password), "Login is not successfully done.");
 		
 		messagePage = site.goToMessagePage();
+		
+		System.out.println("User is on the Message page.");
+		
 		messagePage.clickStartScreeningTenantsButton();
 		
 		asLandlordPage = site.goToAsLandlordPage();
+		
+		System.out.println("User is on the Landlord page.");
 		
 		asLandlordPage.enterPropertyName(propertyName + currentTime);
 		asLandlordPage.enterPropertyDescription(propertyDescription);
@@ -273,12 +295,17 @@ public class HouserieLibrary {
 		asLandlordPage.enterLeaseRent(leaseRent);
 		asLandlordPage.enterLeaseDeposit(leaseDeposite);
 		asLandlordPage.enterLeaseTerm(leaseTerm);
+		System.out.println("Select High End property radio button.");
 		asLandlordPage.clickHighEndPropertyRadioButton();
+		System.out.println("Selected High End property radio button.");
 		asLandlordPage.clickNextButton();
 		
 		countOfTenants = Integer.toString(noOfTenants);
 		
 		addTenantsPage = site.goToAddTenantsPage();
+		
+		System.out.println("User is on the Add Tenants page.");
+		
 		addTenantsPage.selectTenantCountDropdown(countOfTenants);
 		addTenantsPage = site.goToAddTenantsPage();
 		
@@ -334,9 +361,13 @@ public class HouserieLibrary {
 			Assert.assertTrue(paymentPage.getPaymentConfirmationNote().contains("Thank you"), "Thank you message does not appears screen.");
 		}
 		
+		System.out.println("User has initiated order.");
+		
 		selectProductsPage.clickMyAccountDropArrow();
 		selectProductsPage.clickMessageLink();
 		messagePage = site.goToMessagePage();
+		
+		System.out.println("User is on the Message page.");
 		
 		status = true;
 		return status;
