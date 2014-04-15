@@ -171,6 +171,7 @@ public class HouserieLibrary {
 		asLandlordPage.enterLeaseDeposit(leaseDeposite);
 		asLandlordPage.enterLeaseTerm(leaseTerm);
 		System.out.println("Select High End property radio button.");
+		asLandlordPage.waitABit(1500);
 		asLandlordPage.clickHighEndPropertyRadioButton();
 		System.out.println("Selected High End property radio button.");
 		asLandlordPage.clickNextButton();
@@ -296,6 +297,7 @@ public class HouserieLibrary {
 		asLandlordPage.enterLeaseDeposit(leaseDeposite);
 		asLandlordPage.enterLeaseTerm(leaseTerm);
 		System.out.println("Select High End property radio button.");
+		asLandlordPage.waitABit(1500);
 		asLandlordPage.clickHighEndPropertyRadioButton();
 		System.out.println("Selected High End property radio button.");
 		asLandlordPage.clickNextButton();

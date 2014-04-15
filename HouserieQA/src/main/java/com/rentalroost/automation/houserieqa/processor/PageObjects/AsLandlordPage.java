@@ -118,6 +118,7 @@ public class AsLandlordPage extends HouserieWebPage {
 	}
 	
 	public void clickHighEndPropertyRadioButton(){
+		System.out.println("highEndPropertyRadioButton :" +highEndPropertyRadioButton);
 		highEndPropertyRadioButton.click();
 	}
 	
