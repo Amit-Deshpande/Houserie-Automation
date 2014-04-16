@@ -92,7 +92,7 @@ public class TenantScreeningAuthorizationTenantPayTest extends HouserieBasicTest
 		propertyName = houserieLib.getPropertyValue(DEFAULT_ADDPROPERTY_PROPERTYNAME);		
 		tenantauthorizationCompletedMessage = houserieLib.getPropertyValue(DEFAULT_TENANTAUTHORIZATIONCOMPLETED_MESSAGE);
 		sssLastFourDigit = houserieLib.getPropertyValue(DEFAULT_TENANTINFO_SSNLASTFOURDIGIT);
-		
+		currentTime = houserieUtils.getCurrentTimeStamp();
 		initiatedScreeningMessage = tenantauthorizationCompletedMessage + propertyName + currentTime;
 		System.out.println(initiatedScreeningMessage);
 		
@@ -102,7 +102,7 @@ public class TenantScreeningAuthorizationTenantPayTest extends HouserieBasicTest
 		tenantUserName = houserieLib.getPropertyValue(DEFAULT_TENANTLOGIN);	
 		password = houserieLib.getPropertyValue(DEFAULT_LOGIN_PASSWORD);
 		paymethod = "Tenant";
-		currentTime = houserieUtils.getCurrentTimeStamp();
+		
 		
 		houserieLib.initaiteOrder(landlordUserName, tenantUserName, password, paymethod, currentTime);		
 		

@@ -4,7 +4,6 @@
 
 package com.rentalroost.automation.houserieqa;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -68,16 +67,8 @@ public class ChangePaymentOptionLandlordToTenantTest extends HouserieBasicTest{
 		myOrderHistoryPage.clickChangeOrderOptionsButton();
 		myOrderHistoryPage.waitABit(2000);
 		
-		//myOrderHistoryPage.waitForAnElement(By.xpath("html/body/div[12]"));
-		
 		if(myOrderHistoryPage.getChangePaymentOptionDialog().isEnabled()){
 			System.out.println("Enabled: User has focus on the change payment option dialog.");
-			myOrderHistoryPage.clickPaysTenantButton();
-			myOrderHistoryPage.clickChangePaymentOptionButton();			
-		}
-		
-		if(myOrderHistoryPage.getChangePaymentOptionDialog().isDisplayed()){
-			System.out.println("Displayed: User has focus on the change payment option dialog.");
 			myOrderHistoryPage.clickPaysTenantButton();
 			myOrderHistoryPage.clickChangePaymentOptionButton();			
 		}
