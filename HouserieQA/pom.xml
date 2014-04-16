@@ -117,7 +117,7 @@
 
 						</property>
 
-						<workingDirectory>target/surefire-reports/</workingDirectory>
+						<reportsDirectory>target/surefire-reports/</reportsDirectory>
 
 					</properties>
 
