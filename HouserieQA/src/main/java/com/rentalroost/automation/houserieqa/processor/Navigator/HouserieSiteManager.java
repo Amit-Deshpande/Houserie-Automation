@@ -3,7 +3,9 @@ package com.rentalroost.automation.houserieqa.processor.Navigator;
 import java.util.Set;
 
 import org.openqa.selenium.Cookie;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
@@ -69,7 +71,6 @@ public class HouserieSiteManager {
 		public HomePageBeforeLoginPage goToHomePageBeforeLoginPage(){
 			String testHRURL = getBaseURL();
 			getDriver().get(testHRURL);
-			
 			HomePageBeforeLoginPage homePageBeforeLoginPage = PageFactory.initElements(driver, HomePageBeforeLoginPage.class);			
 			return homePageBeforeLoginPage;
 		}	
